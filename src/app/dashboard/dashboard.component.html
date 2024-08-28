@@ -1,0 +1,45 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button [routerLink]="['/dashboard']">
+      <mat-icon>home</mat-icon>
+    </button>
+    
+    <button mat-button>
+        <mat-icon>span</mat-icon>
+        Services
+      </button>
+    <button mat-button [routerLink]="['/infrastructure']">
+      <mat-icon>account_balance</mat-icon>
+      Infrastructure
+    </button>
+    <button mat-button>
+      <mat-icon>event_note</mat-icon>
+      Leaves
+    </button>
+    <button mat-button>
+      <mat-icon>help</mat-icon>
+      Complaints
+    </button>
+    <button mat-icon-button [routerLink]="['/pyq']">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </mat-toolbar>
+ 
+  <mat-card class="profile-card">
+    <mat-card-header>
+      <div mat-card-avatar class="profile-image"></div>
+      <mat-card-title>Name</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+  
+  <mat-tab-group>
+    <mat-tab label="Calendar">
+      <!-- Calendar content here -->
+    </mat-tab>
+    <mat-tab label="Time Table">
+      <!-- Time Table content here -->
+    </mat-tab>
+    <mat-tab label="Events">
+      <!-- Events content here -->
+    </mat-tab>
+  </mat-tab-group>
+  
