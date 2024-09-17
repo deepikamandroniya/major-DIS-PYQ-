@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatMenuModule } from '@angular/material/menu'; 
+import { HttpClientModule } from '@angular/common/http';  // <-- Import this
+
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -45,6 +48,8 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule, 
     MatSelectModule, 
     MatInputModule,
+    HttpClientModule,
+    MatMenuModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },

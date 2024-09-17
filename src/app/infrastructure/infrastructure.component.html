@@ -5,9 +5,23 @@
     
     <span class="spacer"></span>
     
-    <button mat-button [routerLink]="['/services']">
-      <mat-icon>span</mat-icon> Services
+    
+  <mat-menu #servicesMenu="matMenu">
+    <button mat-menu-item [routerLink]="['/placement']">
+      <mat-icon>work</mat-icon>
+      Placement
     </button>
+    <button mat-menu-item [routerLink]="['/pyq']">
+      <mat-icon>description</mat-icon>
+      PYQ
+    </button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="servicesMenu">
+    <mat-icon>apps</mat-icon>
+    Services
+  </button>
+
     
     <button mat-button [routerLink]="['/infrastructure']">
       <mat-icon>account_balance</mat-icon> Infrastructure
