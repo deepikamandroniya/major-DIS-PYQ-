@@ -27,7 +27,6 @@ public class FileUploadService {
         // Save file to directory
         String filePath = saveFile(file);
 
-        // Save paper details to the database
         PreviousPaper paper = new PreviousPaper();
         paper.setSemester(semester);
         paper.setType(type);
