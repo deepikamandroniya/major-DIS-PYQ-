@@ -7,12 +7,17 @@ import { Observable } from 'rxjs';
 })
 export class PyqUploadService {
 
-  private apiUrl = 'http://localhost:8080/api/upload/upload';  // URL of the Spring Boot API
+  private apiUrl = 'http://localhost:8080/api/upload/upload';  
+  private coursesUrl = 'http://localhost:8080/api/courses';  
 
   constructor(private http: HttpClient) { }
 
   uploadFile(formData: FormData): Observable<any> {
     return this.http.post<any>(this.apiUrl, formData);
+    }
+    
+    getCourses(): Observable<any> {
+      return this.http.get<any>(this.coursesUrl);
     }
   
 }

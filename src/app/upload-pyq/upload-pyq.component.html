@@ -38,7 +38,7 @@
   </button>
 </mat-toolbar>
 
-<h4>4-Year Previous Question Papers</h4>
+<h4>Upload 4-Year Previous Question Papers</h4>
 
 <div class="form-container">
   <form [formGroup]="questionPaperForm" (ngSubmit)="onSubmit()">
@@ -60,15 +60,15 @@
       <mat-label>Select Course</mat-label>
       <mat-select formControlName="course" (selectionChange)="onCourseSelection($event.value)">
         <mat-option *ngFor="let course of courses" [value]="course">{{ course }}</mat-option>
-        <mat-option value="other">Other</mat-option>
+        <!-- <mat-option value="other">Other</mat-option> -->
       </mat-select>
     </mat-form-field>
-    
-    <!-- Conditionally show text input if 'Other' is selected -->
-    <mat-form-field *ngIf="otherCourseSelected" appearance="fill" class="full-width">
+<!--     
+    Conditionally show text input if 'Other' is selected -->
+    <!-- <mat-form-field *ngIf="otherCourseSelected" appearance="fill" class="full-width">
       <mat-label>Enter Course Name</mat-label>
       <input matInput formControlName="otherCourse" placeholder="Enter course name" />
-    </mat-form-field>
+    </mat-form-field> -->
 
     <mat-form-field appearance="fill" class="full-width">
       <mat-label>Enter the year of the paper</mat-label>
